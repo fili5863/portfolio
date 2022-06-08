@@ -1,0 +1,30 @@
+* {
+  all: unset;
+  display: revert;
+  cursor: revert;
+  box-sizing: border-box;
+}
+/* typografi */
+h1,
+h2,
+p {
+  font-family: "work sans";
+}
+
+h1 {
+  font-weight: 700;
+  color: #ffab1c;
+}
+h2 {
+  font-weight: 500;
+  color: white;
+}
+p {
+  font-weight: 300;
+  color: white;
+}
+
+/* body */
+body {
+  background: linear-gradient(rgba(3, 66, 62, 1) 0%, rgb(4, 61, 56) 100%);
+}

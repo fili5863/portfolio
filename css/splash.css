@@ -1,0 +1,66 @@
+/* splash */
+/* header */
+.index {
+  background-image: url(../svg/tingel3.svg);
+  background-repeat: no-repeat;
+  background-position: 70% 54%;
+  background-size: 190%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.splash {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+/* typografi */
+.overskrift {
+  height: 30vw;
+  width: auto;
+  margin-inline-start: -3rem;
+}
+h2 {
+  font-family: "work sans";
+  font-weight: 500;
+  color: #ffab1c;
+  border-top: ridge #ffab1c 2px;
+  border-bottom: ridge #ffab1c 2px;
+  background-color: #033e3b;
+
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* body */
+body {
+  background: linear-gradient(rgba(3, 66, 62, 1) 0%, rgb(4, 61, 56) 100%);
+}
+
+/* nav */
+.indexnav {
+  grid-row: 3;
+  margin-inline-start: 30px;
+}
+.indexnav2 {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+li {
+  font-family: "work sans";
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #033e3b;
+  font-size: 1.2rem;
+  background-color: #ffab1c;
+  border: solid #033e3b 2px;
+  padding: 1px;
+}
+li:hover {
+  color: #ffab1c;
+  background-color: #033e3b;
+}
