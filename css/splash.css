@@ -31,11 +31,13 @@ h2 {
 
   font-size: 1rem;
   text-align: center;
+  max-width: unset;
 }
 
 /* body */
 body {
   background: linear-gradient(rgba(3, 66, 62, 1) 0%, rgb(4, 61, 56) 100%);
+  max-width: unset;
 }
 
 /* nav */

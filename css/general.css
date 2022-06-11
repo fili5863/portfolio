@@ -4,27 +4,152 @@
   cursor: revert;
   box-sizing: border-box;
 }
+
 /* typografi */
 h1,
 h2,
 p {
   font-family: "work sans";
+  margin-bottom: 10px;
 }
 
 h1 {
   font-weight: 700;
   color: #ffab1c;
+  font-size: 2rem;
+  margin-block-end: 30px;
 }
 h2 {
   font-weight: 500;
   color: white;
+  font-size: 1.5rem;
 }
 p {
   font-weight: 300;
   color: white;
+  font-size: 1.2rem;
+  text-align: justify;
+  line-height: 1.4;
+}
+
+/* img */
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+/* nav index */
+
+.index {
+  list-style: none;
+}
+/* logo */
+a img {
+  height: auto;
+  width: 330px;
+}
+.nav {
+  padding-block: 10px 10px;
+  background-image: url(../svg/tingel.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+}
+/* link elementer */
+.nav2 ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.nav2 li {
+  font-family: "work sans";
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #033e3b;
+  font-size: 1.2rem;
+  background-color: #ffab1c;
+  padding: 1px;
+}
+.nav2 li:hover {
+  color: #ffab1c;
+  background-color: transparent;
 }
 
 /* body */
 body {
-  background: linear-gradient(rgba(3, 66, 62, 1) 0%, rgb(4, 61, 56) 100%);
+  background: linear-gradient(#03423e 0%, #032a27 100%);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+/* container */
+.container {
+  display: grid;
+  grid-auto-flow: row;
+
+  /* gap mellem rækker */
+  gap: 50px;
+}
+
+@media (min-width: 800px) {
+  .col {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .col2 .element_2 {
+    order: -1;
+  }
+  .element_1 {
+    margin-block-start: -30px;
+  }
+}
+
+@media (min-width: 1000px) {
+  /* nav */
+
+  /* lav header om til grid desktop */
+  header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    padding: 10px;
+    background: linear-gradient(rgb(2, 45, 42) 0%, rgb(2, 36, 33) 100%);
+  }
+  /* laver index logoet mindre */
+  a img {
+    width: 200px;
+  }
+  /* passer nav2 så den ligger i midten */
+  .nav2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .nav2 ul {
+    justify-content: flex-start;
+    margin-inline-start: 20px;
+  }
+  /*  */
+
+  /* putter baggrundsfarve på main */
+  main {
+    background-color: #033e3b;
+    border: solid #033e3b 5px;
+  }
 }
