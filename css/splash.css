@@ -19,17 +19,18 @@
 .overskrift {
   height: 30vw;
   width: auto;
-  margin-inline-start: -3rem;
+  margin-inline-start: -10%;
 }
 h2 {
   font-family: "work sans";
-  font-weight: 500;
-  color: #ffab1c;
+
+  font-weight: 300;
+  color: white;
   border-top: ridge #ffab1c 2px;
   border-bottom: ridge #ffab1c 2px;
   background-color: #033e3b;
 
-  font-size: 1rem;
+  font-size: clamp(1.2rem, 3vw, 2.5rem);
   text-align: center;
   max-width: unset;
 }
@@ -65,4 +66,39 @@ li {
 li:hover {
   color: #ffab1c;
   background-color: #033e3b;
+}
+
+@media (min-width: 1200px) {
+  body {
+    background: none;
+    background-color: white;
+  }
+  .index {
+    background-image: url(../svg/tingel2.svg),
+      linear-gradient(rgba(3, 66, 62, 1) 0%, rgb(4, 61, 56) 100%);
+    background-size: 100%;
+    background-position: 20% 50%;
+    clip-path: polygon(0 0, 100% 0, 100% 86%, 0 95%);
+  }
+
+  .overskrift {
+    height: 360px;
+    margin-inline-start: -8.3%;
+  }
+  h2 {
+    color: white;
+    background-color: unset;
+    border: none;
+    font-weight: 300;
+    font-size: 28px;
+    width: 500px;
+    margin-inline-start: 41.6%;
+  }
+  .indexnav2 {
+    margin-inline-start: 9%;
+  }
+
+  li:hover {
+    border: ridge #ffab1c 2px;
+  }
 }

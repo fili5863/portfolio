@@ -16,8 +16,10 @@ p {
 h1 {
   font-weight: 700;
   color: #ffab1c;
+
   font-size: 2rem;
-  margin-block-end: 30px;
+  text-align: left;
+  text-transform: uppercase;
 }
 h2 {
   font-weight: 500;
@@ -58,6 +60,7 @@ a img {
   justify-content: center;
 }
 /* link elementer */
+
 .nav2 ul {
   list-style: none;
   display: flex;
@@ -90,33 +93,45 @@ header {
   gap: 20px;
 }
 
-main {
-  max-width: 1200px;
-  margin: 0 auto;
+footer {
+  font-family: "work sans";
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #ffab1c;
+  background-color: #033e3b;
+  text-align: center;
+}
+
+section {
   padding: 15px;
+  margin-block-end: 50px;
 }
 
 /* container */
 .container {
-  display: grid;
-  grid-auto-flow: row;
-
-  /* gap mellem rækker */
-  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 @media (min-width: 800px) {
+  h1 {
+    margin-inline-start: 5px;
+    display: table;
+    padding-inline: 2px;
+    background-color: #033e3b;
+  }
+
   .col {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+    background-color: #032a27;
+    border: solid #033e3b 5px;
+    padding: 20px;
   }
 
   .col2 .element_2 {
     order: -1;
-  }
-  .element_1 {
-    margin-block-start: -30px;
   }
 }
 
@@ -132,7 +147,12 @@ main {
   }
   /* laver index logoet mindre */
   a img {
-    width: 200px;
+    width: 120px;
+  }
+
+  .nav {
+    padding-block: 0;
+    background-image: none;
   }
   /* passer nav2 så den ligger i midten */
   .nav2 {
@@ -145,11 +165,39 @@ main {
     justify-content: flex-start;
     margin-inline-start: 20px;
   }
+
+  .nav2 li {
+    color: #ffab1c;
+    background-color: transparent;
+    border: ridge #ffab1c 2px;
+  }
+
+  .nav2 li:hover {
+    color: #033e3b;
+    background-color: #ffab1c;
+    border: unset;
+  }
   /*  */
 
-  /* putter baggrundsfarve på main */
+  /* main */
   main {
-    background-color: #033e3b;
-    border: solid #033e3b 5px;
+    /* laver afstand fra nav til main */
+    margin-block-start: 150px;
+  }
+
+  /* putter tingel på body */
+  body {
+    background: url(../svg/tingel4.svg), linear-gradient(#03423e 0%, #032a27 100%);
+    background-repeat: repeat-y;
+    background-size: cover, 100%;
+  }
+
+  /* putter skygger på billeder */
+  main img {
+    box-shadow: #ffab1c 10px 10px 0px;
+  }
+
+  .modsat img {
+    box-shadow: #ffab1c -10px 10px 0px;
   }
 }
