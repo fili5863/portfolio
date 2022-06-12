@@ -32,6 +32,7 @@ h3 {
   font-weight: 500;
   color: white;
   font-size: 1.4rem;
+  margin-block-start: -6px;
 }
 
 p {
@@ -218,8 +219,5 @@ section {
     box-shadow: #ffab1c 1px 1px 0px, #ffab1c 2px 2px 0px, #ffab1c 3px 3px 0px, #ffab1c 4px 4px 0px,
       #ffab1c 5px 5px 0px, #ffab1c 6px 6px 0px, #ffab1c 7px 7px 0px, #ffab1c 8px 8px 0px,
       #ffab1c 9px 9px 0px, #ffab1c 10px 10px 0px;
-  }
-
-  .modsat img {
   }
 }
