@@ -5,6 +5,13 @@
   box-sizing: border-box;
 }
 
+:root {
+  --lys: #033e3b;
+  --mork: #032a27;
+  --sort: #0a0a0a;
+  --gul: #ffab1c;
+}
+
 /* typografi */
 h1,
 h2,
@@ -16,7 +23,7 @@ p {
 
 h1 {
   font-weight: 700;
-  color: #ffab1c;
+  color: var(--gul);
 
   font-size: 2rem;
   text-align: left;
@@ -77,24 +84,24 @@ a img {
   font-family: "work sans";
   font-weight: 500;
   text-transform: uppercase;
-  color: #033e3b;
+  color: var(--lys);
   font-size: 1.2rem;
-  background-color: #ffab1c;
+  background-color: var(--gul);
   padding: 1px;
 }
 .nav2 li:hover {
-  color: #ffab1c;
+  color: var(--gul);
   background-color: transparent;
 }
 
 p a {
-  color: #ffab1c;
+  color: var(--gul);
   text-decoration: underline;
 }
 
 /* body */
 body {
-  background: linear-gradient(#03423e 0%, #032a27 100%);
+  background: linear-gradient(#03423e 0%, var(--mork) 100%);
 }
 
 header {
@@ -107,8 +114,8 @@ footer {
   font-family: "work sans";
   font-weight: 400;
   font-size: 1.2rem;
-  color: #ffab1c;
-  background-color: #0a0a0a;
+  color: var(--gul);
+  background-color: var(--sort);
   text-align: center;
 }
 
@@ -127,7 +134,7 @@ section {
   h1 {
     display: table;
     padding-inline: 5px;
-    background-color: #033e3b;
+    background-color: var(--lys);
   }
 
   .col {
@@ -135,17 +142,17 @@ section {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto 1fr;
     gap: 20px;
-    background-color: #032a27;
-    border: solid #033e3b 5px;
+    background-color: var(--mork);
+    border: solid var(--lys) 5px;
     padding: 20px;
   }
   .intro {
     grid-column: 1 / span 2;
-    border-bottom: ridge #ffab1c 2px;
+    border-bottom: ridge var(--gul) 2px;
   }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
   /* nav */
 
   /* lav header om til grid desktop */
@@ -153,8 +160,8 @@ section {
     display: grid;
     grid-template-columns: auto 1fr;
     padding: 10px;
-    background: #0a0a0a;
-    box-shadow: #032a27c0 0px 5px 5px;
+    background: var(--sort);
+    box-shadow: var(--mork) c0 0px 5px 5px;
     position: fixed;
     top: 0;
     width: 100%;
@@ -181,19 +188,19 @@ section {
   }
 
   .nav2 li {
-    color: #ffab1c;
+    color: var(--gul);
     background-color: transparent;
-    border: ridge #ffab1c 2px;
+    border: ridge var(--gul) 2px;
     transition: 0.3s;
   }
 
   .nav2 li:hover {
-    color: #0a0a0a;
-    background-color: #ffab1c;
+    color: var(--sort);
+    background-color: var(--gul);
     border: unset;
     transform: translateX(-5px) translateY(-5px);
-    box-shadow: #ffab1c 1px 1px 0px, #ffab1c 2px 2px 0px, #ffab1c 3px 3px 0px, #ffab1c 4px 4px 0px,
-      #ffab1c 5px 5px 0px;
+    box-shadow: var(--gul) 1px 1px 0px, var(--gul) 2px 2px 0px, var(--gul) 3px 3px 0px,
+      var(--gul) 4px 4px 0px, var(--gul) 5px 5px 0px;
   }
   /*  */
 
@@ -205,7 +212,7 @@ section {
 
   /* putter tingel på body */
   body {
-    background: url(../svg/tingel4.svg), #033e3b;
+    background: url(../svg/tingel4.svg), var(--lys);
     background-size: cover, 100%;
     background-attachment: fixed;
   }
@@ -216,8 +223,8 @@ section {
   }
   main img:hover {
     transform: translateX(-10px) translateY(-10px);
-    box-shadow: #ffab1c 1px 1px 0px, #ffab1c 2px 2px 0px, #ffab1c 3px 3px 0px, #ffab1c 4px 4px 0px,
-      #ffab1c 5px 5px 0px, #ffab1c 6px 6px 0px, #ffab1c 7px 7px 0px, #ffab1c 8px 8px 0px,
-      #ffab1c 9px 9px 0px, #ffab1c 10px 10px 0px;
+    box-shadow: var(--gul) 1px 1px 0px, var(--gul) 2px 2px 0px, var(--gul) 3px 3px 0px,
+      var(--gul) 4px 4px 0px, var(--gul) 5px 5px 0px, var(--gul) 6px 6px 0px, var(--gul) 7px 7px 0px,
+      var(--gul) 8px 8px 0px, var(--gul) 9px 9px 0px, var(--gul) 10px 10px 0px;
   }
 }

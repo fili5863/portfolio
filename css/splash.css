@@ -1,3 +1,9 @@
+* {
+  all: unset;
+  display: revert;
+  cursor: revert;
+  box-sizing: border-box;
+}
 /* splash */
 /* header */
 .index {
@@ -26,9 +32,9 @@ h2 {
 
   font-weight: 300;
   color: white;
-  border-top: ridge #ffab1c 2px;
-  border-bottom: ridge #ffab1c 2px;
-  background-color: #033e3b;
+  border-top: ridge var(--gul) 2px;
+  border-bottom: ridge var(--gul) 2px;
+  background-color: var(--lys);
   font-style: normal;
   font-size: clamp(1.2rem, 3vw, 2.5rem);
   text-align: center;
@@ -57,15 +63,15 @@ li {
   font-family: "work sans";
   font-weight: 500;
   text-transform: uppercase;
-  color: #033e3b;
+  color: var(--lys);
   font-size: 1.2rem;
-  background-color: #ffab1c;
-  border: solid #033e3b 2px;
+  background-color: var(--gul);
+  border: solid var(--lys) 2px;
   padding: 1px;
 }
 li:hover {
-  color: #ffab1c;
-  background-color: transparent;
+  color: var(--gul);
+  background-color: var(--lys);
 }
 
 @media (min-width: 1200px) {
@@ -99,17 +105,17 @@ li:hover {
   }
 
   li {
-    color: #ffab1c;
+    color: var(--gul);
     background-color: transparent;
-    border: ridge #ffab1c 2px;
+    border: ridge var(--gul) 2px;
     transition: 0.3s;
   }
   li:hover {
-    color: #033e3b;
-    background-color: #ffab1c;
+    color: var(--lys);
+    background-color: var(--gul);
     border: unset;
     transform: translateX(-5px) translateY(-5px);
-    box-shadow: #ffab1c 1px 1px 0px, #ffab1c 2px 2px 0px, #ffab1c 3px 3px 0px, #ffab1c 4px 4px 0px,
-      #ffab1c 5px 5px 0px;
+    box-shadow: var(--gul) 1px 1px 0px, var(--gul) 2px 2px 0px, var(--gul) 3px 3px 0px,
+      var(--gul) 4px 4px 0px, var(--gul) 5px 5px 0px;
   }
 }
