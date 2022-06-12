@@ -8,6 +8,7 @@
 /* typografi */
 h1,
 h2,
+h3,
 p {
   font-family: "work sans";
   margin-bottom: 10px;
@@ -25,13 +26,21 @@ h2 {
   font-weight: 500;
   color: white;
   font-size: 1.5rem;
+  font-style: italic;
 }
+h3 {
+  font-weight: 500;
+  color: white;
+  font-size: 1.4rem;
+}
+
 p {
   font-weight: 300;
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   text-align: justify;
   line-height: 1.4;
+  hyphens: auto;
 }
 
 /* img */
@@ -40,11 +49,6 @@ img {
   max-width: 100%;
 }
 
-/* nav index */
-
-.index {
-  list-style: none;
-}
 /* logo */
 a img {
   height: auto;
@@ -82,6 +86,11 @@ a img {
   background-color: transparent;
 }
 
+p a {
+  color: #ffab1c;
+  text-decoration: underline;
+}
+
 /* body */
 body {
   background: linear-gradient(#03423e 0%, #032a27 100%);
@@ -98,7 +107,7 @@ footer {
   font-weight: 400;
   font-size: 1.2rem;
   color: #ffab1c;
-  background-color: #033e3b;
+  background-color: #0a0a0a;
   text-align: center;
 }
 
@@ -115,23 +124,23 @@ section {
 
 @media (min-width: 800px) {
   h1 {
-    margin-inline-start: 5px;
     display: table;
-    padding-inline: 2px;
+    padding-inline: 5px;
     background-color: #033e3b;
   }
 
   .col {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto 1fr;
     gap: 20px;
     background-color: #032a27;
     border: solid #033e3b 5px;
     padding: 20px;
   }
-
-  .col2 .element_2 {
-    order: -1;
+  .intro {
+    grid-column: 1 / span 2;
+    border-bottom: ridge #ffab1c 2px;
   }
 }
 
@@ -143,7 +152,11 @@ section {
     display: grid;
     grid-template-columns: auto 1fr;
     padding: 10px;
-    background: linear-gradient(rgb(2, 45, 42) 0%, rgb(2, 36, 33) 100%);
+    background: #0a0a0a;
+    box-shadow: #032a27c0 0px 5px 5px;
+    position: fixed;
+    top: 0;
+    width: 100%;
   }
   /* laver index logoet mindre */
   a img {
@@ -170,12 +183,16 @@ section {
     color: #ffab1c;
     background-color: transparent;
     border: ridge #ffab1c 2px;
+    transition: 0.3s;
   }
 
   .nav2 li:hover {
-    color: #033e3b;
+    color: #0a0a0a;
     background-color: #ffab1c;
     border: unset;
+    transform: translateX(-5px) translateY(-5px);
+    box-shadow: #ffab1c 1px 1px 0px, #ffab1c 2px 2px 0px, #ffab1c 3px 3px 0px, #ffab1c 4px 4px 0px,
+      #ffab1c 5px 5px 0px;
   }
   /*  */
 
@@ -187,17 +204,22 @@ section {
 
   /* putter tingel på body */
   body {
-    background: url(../svg/tingel4.svg), linear-gradient(#03423e 0%, #032a27 100%);
-    background-repeat: repeat-y;
+    background: url(../svg/tingel4.svg), #033e3b;
     background-size: cover, 100%;
+    background-attachment: fixed;
   }
 
   /* putter skygger på billeder */
   main img {
-    box-shadow: #ffab1c 10px 10px 0px;
+    transition: 0.3s;
+  }
+  main img:hover {
+    transform: translateX(-10px) translateY(-10px);
+    box-shadow: #ffab1c 1px 1px 0px, #ffab1c 2px 2px 0px, #ffab1c 3px 3px 0px, #ffab1c 4px 4px 0px,
+      #ffab1c 5px 5px 0px, #ffab1c 6px 6px 0px, #ffab1c 7px 7px 0px, #ffab1c 8px 8px 0px,
+      #ffab1c 9px 9px 0px, #ffab1c 10px 10px 0px;
   }
 
   .modsat img {
-    box-shadow: #ffab1c -10px 10px 0px;
   }
 }
