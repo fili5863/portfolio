@@ -58,7 +58,7 @@ img {
 }
 
 /* logo */
-a img {
+.index2 img {
   height: auto;
   width: 330px;
 }
@@ -167,7 +167,7 @@ section {
     width: 100%;
   }
   /* laver index logoet mindre */
-  a img {
+  .index2 img {
     width: 120px;
   }
 
