@@ -8,7 +8,7 @@
 :root {
   --lys: #033e3b;
   --mork: #032a27;
-  --sort: #0a0a0a;
+  --sort: #1c1c1c;
   --gul: #ffab1c;
 }
 
@@ -159,9 +159,9 @@ section {
   header {
     display: grid;
     grid-template-columns: auto 1fr;
-    padding: 10px;
+    padding: 5px;
     background: var(--sort);
-    box-shadow: var(--mork) c0 0px 5px 5px;
+    box-shadow: var(--mork) 0px 5px 5px;
     position: fixed;
     top: 0;
     width: 100%;
