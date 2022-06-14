@@ -25,7 +25,7 @@ h1 {
   font-weight: 700;
   color: var(--gul);
 
-  font-size: 2rem;
+  font-size: clamp(1.6rem, 2.5vw, 2rem);
   text-align: left;
   text-transform: uppercase;
 }
@@ -40,9 +40,6 @@ h3 {
   color: white;
   font-size: 1.4rem;
 }
-h3:first-of-type {
-  margin-block-start: -6px;
-}
 
 p {
   font-weight: 300;
@@ -51,6 +48,16 @@ p {
   text-align: justify;
   line-height: 1.4;
   hyphens: auto;
+}
+
+.ref {
+  font-weight: 400;
+  padding-block: 20px 20px;
+}
+
+p a {
+  color: var(--gul);
+  text-decoration: underline;
 }
 
 /* img */
@@ -96,14 +103,13 @@ img {
   background-color: transparent;
 }
 
-p a {
-  color: var(--gul);
-  text-decoration: underline;
+.menuPunkter {
+  display: none;
 }
 
 /* body */
 body {
-  background: linear-gradient(#03423e 0%, var(--mork) 100%);
+  background-color: var(--lys);
 }
 
 header {
@@ -131,30 +137,7 @@ section {
   max-width: 1200px;
   margin: 0 auto;
 }
-
 @media (min-width: 800px) {
-  h1 {
-    display: table;
-    padding-inline: 5px;
-    background-color: var(--lys);
-  }
-
-  .col {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto 1fr;
-    gap: 20px;
-    background-color: var(--mork);
-    border: solid var(--lys) 5px;
-    padding: 20px;
-  }
-  .intro {
-    grid-column: 1 / span 2;
-    border-bottom: ridge var(--gul) 2px;
-  }
-}
-
-@media (min-width: 1200px) {
   /* nav */
 
   /* lav header om til grid desktop */
@@ -167,6 +150,7 @@ section {
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 2;
   }
   /* laver index logoet mindre */
   .index2 img {
@@ -204,8 +188,67 @@ section {
     box-shadow: var(--gul) 1px 1px 0px, var(--gul) 2px 2px 0px, var(--gul) 3px 3px 0px,
       var(--gul) 4px 4px 0px, var(--gul) 5px 5px 0px;
   }
-  /*  */
+  .menuPunkter {
+    display: unset;
+    position: fixed;
+    top: 7%;
+    width: 100vw;
+    background-color: var(--sort);
+    z-index: 3;
+  }
+  .menuPunkter ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  .menuPunkter li {
+    font-family: "work sans";
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--gul);
+    font-size: 1.2rem;
+    padding: 1px;
+    transition: 0.3s;
+    list-style: none;
+  }
 
+  .menuPunkter li:hover {
+    transform: translateX(10%);
+  }
+  h1 {
+    display: table;
+    padding-inline: 5px;
+    background-color: var(--lys);
+  }
+  h3:first-of-type {
+    margin-block-start: -6px;
+  }
+
+  .col {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto 1fr;
+    gap: 20px;
+    background-color: var(--mork);
+    border: solid var(--lys) 5px;
+    padding: 20px;
+  }
+  .intro {
+    grid-column: 1 / span 2;
+    border-bottom: ridge var(--gul) 2px;
+  }
+  /* putter skygger på billeder */
+  main img {
+    transition: 0.3s;
+  }
+  main img:hover {
+    transform: translateX(-10px) translateY(-10px);
+    box-shadow: var(--gul) 1px 1px 0px, var(--gul) 2px 2px 0px, var(--gul) 3px 3px 0px,
+      var(--gul) 4px 4px 0px, var(--gul) 5px 5px 0px, var(--gul) 6px 6px 0px, var(--gul) 7px 7px 0px,
+      var(--gul) 8px 8px 0px, var(--gul) 9px 9px 0px, var(--gul) 10px 10px 0px;
+  }
+}
+
+@media (min-width: 1200px) {
   /* main */
   main {
     /* laver afstand fra nav til main */
@@ -218,15 +261,26 @@ section {
     background-size: cover, 100%;
     background-attachment: fixed;
   }
+}
 
-  /* putter skygger på billeder */
-  main img {
-    transition: 0.3s;
+@media (min-width: 1500px) {
+  /* smider menuen ud til siden */
+  .menuPunkter {
+    position: fixed;
+    display: block;
+    top: 40%;
+    left: 10px;
+    gap: 10px;
+    background-color: unset;
+    width: unset;
   }
-  main img:hover {
-    transform: translateX(-10px) translateY(-10px);
-    box-shadow: var(--gul) 1px 1px 0px, var(--gul) 2px 2px 0px, var(--gul) 3px 3px 0px,
-      var(--gul) 4px 4px 0px, var(--gul) 5px 5px 0px, var(--gul) 6px 6px 0px, var(--gul) 7px 7px 0px,
-      var(--gul) 8px 8px 0px, var(--gul) 9px 9px 0px, var(--gul) 10px 10px 0px;
+  .menuPunkter li:hover {
+    list-style: circle;
+  }
+
+  .menuPunkter ul {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
   }
 }

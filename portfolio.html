@@ -27,13 +27,23 @@
         </ul>
       </nav>
     </header>
+    <div class="menuPunkter">
+      <ul>
+        <!-- bruger javascript:void(0) for at undgå at siden refresher -->
+        <li><a id="webKnap" href="javascript:void(0)">02 Web</a></li>
+        <li><a id="uxKnap" href="javascript:void(0)">03 UX</a></li>
+        <li><a id="animKnap" href="javascript:void(0)">04 Animation</a></li>
+        <li><a id="indKnap" href="javascript:void(0)">05 Indhold</a></li>
+        <li><a id="pfKnap" href="javascript:void(0)">06 Portfolio</a></li>
+      </ul>
+    </div>
     <main>
       <!-- TEMA 2 -->
       <section>
         <div class="container">
           <h1>02 Grundlæggende web</h1>
           <div class="col">
-            <article class="intro">
+            <article id="web" class="intro">
               <h2>Hvad gennemgik vi i dette tema?</h2>
               <p>
                 I dette tema blev vi introduceret til grundlæggende webdesign og vi lærte om
@@ -42,7 +52,8 @@
                 første responsive webdesign.
               </p>
               <p>
-                Vi lærte om mediaqueries, samt grid og flex for at gøre vores website responsivt.
+                Vi lærte blandt andet om mediaqueries, samt grid og flex for at gøre vores website
+                responsivt.
               </p>
               <p>
                 Vi fik tildelt en stilart, hvor jeg fik Flat design og kunne selv vælge hvad
@@ -50,7 +61,9 @@
               </p>
             </article>
             <div class="element_1">
-              <a href="https://worldwidewesth.dk/kea/02_web/04_responsive/responsive_site_v2/"
+              <a
+                href="https://worldwidewesth.dk/kea/02_web/04_responsive/responsive_site_v2/"
+                target="_blank"
                 ><img src="img/jachob_splashbillede.jpg" alt="test"
               /></a>
             </div>
@@ -67,7 +80,7 @@
                   det beholdte de simplificerede look, som kendetegner Flatdesign.
                 </p>
 
-                <p>Klik på billedet for at komme til siden.</p>
+                <p class="ref">Klik på billedet for at komme til siden.</p>
               </article>
             </div>
           </div>
@@ -80,7 +93,7 @@
         <div class="container">
           <h1>03 Grundlæggende ux</h1>
           <div class="col">
-            <article class="intro">
+            <article id="ux" class="intro">
               <h2>Hvad gennemgik vi i dette tema?</h2>
               <p>
                 I dette tema blev vi introduceret til grundlæggende UX og forskellige research
@@ -98,11 +111,6 @@
               </p>
             </article>
             <div class="element_1">
-              <a href="https://worldwidewesth.dk/kea/02_web/04_responsive/responsive_site_v2/"
-                ><img src="img/jachob_splashbillede.jpg" alt="test"
-              /></a>
-            </div>
-            <div class="element_2">
               <article>
                 <h3>Prototype 2</h3>
                 <p>
@@ -115,11 +123,31 @@
                   ud fra f. eks bukser du skulle have på. Det var muligt at købe matchende sokker og
                   kasketter.
                 </p>
+                <p class="ref">Klik på billedet for at komme til siden.</p>
+              </article>
+            </div>
+            <div class="element_2">
+              <a
+                href="https://xd.adobe.com/view/a2dd784e-82bd-4e1a-8a7e-005cd11a18f9-f78e/"
+                target="_blank"
+                ><img src="img/prototype.png" alt="XD prototype 2"
+              /></a>
+            </div>
+            <div class="element_3">
+              <a
+                href="https://docs.google.com/presentation/d/1Wx4FVEOJBSgs1r4IhotT4BcUixisAt7_0Cx8YkUpeLo/edit?usp=sharing"
+                target="_blank"
+                ><img src="img/pitch.png" alt="pitch deck"
+              /></a>
+            </div>
+            <div class="element_4">
+              <article>
                 <h3>UX Pitch Deck</h3>
                 <p>
                   Vi skulle derefter pitche vores idé, hvor vi skulle forklare om vores process med
                   research, design og test.
                 </p>
+                <p class="ref">Klik på billedet for at komme til siden.</p>
               </article>
             </div>
           </div>
@@ -132,16 +160,45 @@
         <div class="container">
           <h1>04 Grundlæggende animation</h1>
           <div class="col">
-            <div class="element_1">
-              <h2>04_animation</h2>
+            <article id="animation" class="intro">
+              <h2>Hvad gennemgik vi i dette tema?</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. In amet ad incidunt
-                temporibus rerum dolorum. Cum laudantium velit debitis, commodi aliquam recusandae,
-                omnis expedita sint quo ducimus accusamus, quidem nobis.
+                I dette tema gennemgik vi grundlæggende animation. vi blev introduceret til
+                programmeringssproget Javascript, som skulle bruges til at lave et simpelt og
+                interaktivt spil.
               </p>
+
+              <p>
+                Vi lærte også aktivitets- og state machine diagrammer, som gør det nemmere at forstå
+                hvad vores spil skal gøre og hvornår det skal gøre det.
+              </p>
+
+              <p>
+                Vi lavede en masse øvelser I JS, for at lære hvordan vi kunne få vores elementer til
+                at reagere på at man klikkede på dem I form af frys af animationen, få elementerne
+                til at dreje og forsvinde, få animationerne til at genstarte samt interatkive point
+                og liv systemer. Vi lærte også om vektorgrafik I Illustrator for at kunne kreere
+                vores figurer I spillet samt optage lyd og sætte effekter på med Adobe Audition og
+                hvordan man implementerer det I spillet gennem JS.
+              </p>
+            </article>
+            <div class="element_1">
+              <a href="http://worldwidewesth.dk/kea/04_animation/spil/spil.html"
+                ><img src="img/spil.png" alt="spilsite"
+              /></a>
             </div>
             <div class="element_2">
-              <img src="img/Component_1–12.png" alt="test" />
+              <h3>Whack Smith</h3>
+              <p>
+                Vi skulle udarbejde et spil ud fra de færdigheder vi havde fået fra de adskillige
+                øvelser vi havde lavet. Jeg valgte at lave et “Whack-a-mole"-style spil, som
+                omhandlede den hændelse, som skete under dette års Oscaruddeling, som var relevant
+                på det tidspunkt.
+              </p>
+              <p class="ref">
+                Du kan klikke på billedet for at blive ført til min spilside, hvor du blandt andet
+                også kan læse om min designprocess.
+              </p>
             </div>
           </div>
         </div>
@@ -153,22 +210,47 @@
         <div class="container">
           <h1>05 Grundlæggende indhold</h1>
           <div class="col">
-            <div class="element_1">
-              <h2>05_pilot</h2>
+            <article id="indhold" class="intro">
+              <h2>Hvad gennemgik vi i dette tema?</h2>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus possimus qui
                 veniam accusantium dolorem quos quibusdam, sed voluptates. Quam inventore officia
                 velit eveniet, corporis dolore harum repellat recusandae esse enim.
               </p>
-            </div>
+            </article>
+            <div class="element_1"></div>
             <div class="element_2">
               <img src="img/Component_1–12.png" alt="test" />
             </div>
           </div>
         </div>
       </section>
-      <!-- /////////////////S -->
+      <!-- ///////////////// -->
+
+      <!-- TEMA 6 -->
+      <section>
+        <div class="container">
+          <h1>06 Portfolio</h1>
+          <div class="col">
+            <article id="portfolio" class="intro">
+              <h2>Hvad gennemgik vi i dette tema?</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus possimus qui
+                veniam accusantium dolorem quos quibusdam, sed voluptates. Quam inventore officia
+                velit eveniet, corporis dolore harum repellat recusandae esse enim.
+              </p>
+            </article>
+
+            <div class="element_1">
+              <img src="img/Component_1–12.png" alt="test" />
+            </div>
+            <div class="element_2"></div>
+          </div>
+        </div>
+      </section>
+      <!-- ///////////////// -->
     </main>
     <footer>JACHOB WESTH - PORTFOLIO 1. SEMESTER - 2022</footer>
+    <script src="js/script.js"></script>
   </body>
 </html>
