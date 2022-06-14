@@ -37,7 +37,7 @@ h2 {
 }
 h3 {
   font-weight: 500;
-  color: white;
+  color: var(--gul);
   font-size: 1.4rem;
 }
 
@@ -137,6 +137,23 @@ section {
   max-width: 1200px;
   margin: 0 auto;
 }
+
+article {
+  border-bottom: ridge var(--gul) 2px;
+  margin-block-end: 20px;
+}
+
+/* video */
+#film {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.filmshit {
+  width: 100%;
+
+  aspect-ratio: 16/9;
+}
 @media (min-width: 800px) {
   /* nav */
 
@@ -232,10 +249,31 @@ section {
     border: solid var(--lys) 5px;
     padding: 20px;
   }
+  .elementer1,
+  .elementer2,
+  .elementer3,
+  .elementer4 {
+    grid-column: 1 / span 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .elementer1 .element_2 {
+    order: -1;
+  }
+  .elementer3 .element_2 {
+    order: -1;
+  }
+  article {
+    border-bottom: unset;
+  }
   .intro {
     grid-column: 1 / span 2;
     border-bottom: ridge var(--gul) 2px;
+    margin-block-end: 20px;
   }
+
   /* putter skygger på billeder */
   main img {
     transition: 0.3s;
